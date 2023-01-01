@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Post Card UI Design</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="profile.png" class="cover">
+            </div>
+            <h3>Rifqi Ashari<br><span>Jakarta Timur</span></h3>
+            </div>
+            <div>
+                <img src="dot.png" class="dot">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="bg.jpg" class="cover">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="heart.png" class="heart" onclick="likeButton()">
+                <img src="comment.png">
+                <img src="share.png">
+            </div>
+            <div class="right">
+                <img src="bookmark.png">
+            </div>
+        </div>
+        <h4 class="likes">3,684 likes</h4>
+        <h4 class="message" ><b>Rifqi Ashari</b> Thanks for your love and supports <span>#cards</span> <span>#html</span> <span>#css </span></h4>
+        <h4 class="comments ">View all 245 comments</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="user.jpg" class="cover">
+            </div>
+            <input type="text" class="text" placeholder="Add a comment...">
+        </div>
+        <h5 class="postTime">4 hours ago</h5>
+    </div>
+
+    <script>
+        function likeButton(){
+        let heart = document.querySelector('.heart'); 
+        let likes = document.querySelector('.likes');
+        if (heart.src.match("heart.png")){
+            heart.src = "heart_red.png";
+            likes.innerHTML = "3,685 likes";
+        }
+        else{
+            heart.src = "heart.png";
+            likes.innerHTML = "3,684 likes";
+        }
+    }
+    </script>
+</body>
+</html>
